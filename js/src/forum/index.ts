@@ -74,7 +74,12 @@ function renderTab(tab: TabConfig) {
       return m(
         'button.MobileTab-tab',
         {
-          onclick: () => (document.querySelector('.Search input, #header-search input') as HTMLElement | null)?.focus(),
+          // Flarum 2 renders search as a button that opens the search modal; older builds use a plain input.
+          onclick: () => {
+            const el = document.querySelector('.Search button.Search-input, .Search input, #header-search input') as HTMLElement | null;
+            if (el?.tagName === 'BUTTON') el.click();
+            else el?.focus();
+          },
         },
         [m('span.MobileTab-tab-icon', iconNode(tab, 'fas fa-search')), labelNode(tab, tabName('search'))]
       );
