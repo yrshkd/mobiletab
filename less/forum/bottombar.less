@@ -232,7 +232,7 @@
             // width:100% + text-align:center keeps it centered under
             // the avatar regardless of the text's natural width.
             &::after {
-                content: 'Profile';
+                content: none;
                 font-size: 10px;
                 font-weight: 500;
                 color: var(--header-color);
@@ -244,7 +244,7 @@
             }
         }
 
-        // Label configured in admin overrides the default "Profile"
+        // Label only shown when one is configured in admin
         &[data-label] .Dropdown-toggle::after {
             content: attr(data-label);
         }
