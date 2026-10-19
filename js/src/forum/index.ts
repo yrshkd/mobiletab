@@ -60,7 +60,7 @@ function renderTab(tab: TabConfig) {
     }
 
     case 'profile':
-      return user ? m('div.MobileTab-tab.MobileTab-tab--session', m(SessionDropdown)) : null;
+      return user ? m('div.MobileTab-tab.MobileTab-tab--session', { 'data-label': tab.label || undefined }, m(SessionDropdown)) : null;
 
     case 'login':
       return user

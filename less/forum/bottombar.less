@@ -244,6 +244,11 @@
             }
         }
 
+        // Label configured in admin overrides the default "Profile"
+        &[data-label] .Dropdown-toggle::after {
+            content: attr(data-label);
+        }
+
         // Bottom sheet menu — padding clears our bar
         .Dropdown-menu {
             padding-bottom: 70px !important;
