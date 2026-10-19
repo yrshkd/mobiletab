@@ -65,22 +65,18 @@
         border: none;
         cursor: pointer;
         text-decoration: none;
-        color: var(--muted-color);
+        color: var(--header-color);
         padding: 0;
         font-family: inherit;
 
         &:hover,
         &:focus {
             text-decoration: none;
-            color: var(--muted-color);
+            color: var(--header-color);
         }
 
-        &.active {
-            color: var(--primary-color);
-
-            .MobileTab-tab-icon i {
-                color: var(--primary-color);
-            }
+        &.active .MobileTab-tab-label {
+            font-weight: 700;
         }
     }
 
@@ -94,7 +90,7 @@
 
         i {
             font-size: 18px;
-            color: var(--muted-color);
+            color: inherit;
         }
     }
 
@@ -239,7 +235,7 @@
                 content: 'Profile';
                 font-size: 10px;
                 font-weight: 500;
-                color: var(--muted-color);
+                color: var(--header-color);
                 line-height: 1;
                 white-space: nowrap;
                 display: block;

@@ -56,6 +56,11 @@
         z-index: 1010;
     }
 
+    // ── Time of Magic back-to-top — lift above the bar ────────
+    html.has-mobile-tab #back-to-top {
+        bottom: (@mobiletab-bar-height + 16px);
+    }
+
     // ── DiscussionList — remove Flarum's negative phone margin ─
     // Flarum applies margin: 0 -15px on .DiscussionList at @phone.
     // This causes horizontal overflow when our bar is present.
